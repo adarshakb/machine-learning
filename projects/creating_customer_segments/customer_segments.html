@@ -11782,7 +11782,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[124]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11835,7 +11835,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[125]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display a description of the dataset</span>
@@ -11963,7 +11963,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[126]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Select three indices of your choice you wish to sample from the dataset</span>
@@ -13010,7 +13010,7 @@ iklHmyRJUjH/B/724r7fZTyWAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[127]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Make a copy of the DataFrame, using the &#39;drop&#39; function to drop the given feature</span>
@@ -13085,7 +13085,7 @@ iklHmyRJUjH/B/724r7fZTyWAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[128]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Produce a scatter matrix for each pair of features in the data</span>
@@ -14557,7 +14557,7 @@ MpAKkxBCCCGEEEJkIBUmIYQQQgghhMhAKkxCCCGEEEIIkcH/B1UKxp9li2XYAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[129]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Scale the data using the natural logarithm</span>
@@ -17384,7 +17384,7 @@ RU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[130]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the log-transformed sample data</span>
@@ -17475,7 +17475,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[131]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># For each feature find the data points with extreme high or low values</span>
@@ -17500,11 +17500,8 @@ Once you have performed this implementation, the dataset will be stored in the v
 <span class="c1"># drop data points if they are outliers in more than one &quot;outler&quot; positions</span>
 
 
-<span class="n">outliers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="o">*</span><span class="n">outliersPerFeatureSets</span><span class="p">))</span>
-<span class="k">print</span> <span class="s2">&quot;Number of data points which have ALL outliers in them: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">outliers</span><span class="p">))</span>
-
-<span class="c1">## override the outliers calculated above. ##</span>
-<span class="c1">## explanation provided below ##</span>
+<span class="c1"># outliers = list(set.intersection(*outliersPerFeatureSets))</span>
+<span class="c1"># print &quot;Number of data points which have ALL outliers in them: {}&quot;.format(len(outliers))</span>
 
 <span class="n">outliers</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">outliersPerFeatureSets</span><span class="p">)):</span>
@@ -17513,6 +17510,12 @@ Once you have performed this implementation, the dataset will be stored in the v
 
 <span class="n">outliers</span>  <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">outliers</span><span class="p">)</span>
 <span class="k">print</span> <span class="s2">&quot;Number of data points which have &gt; 1 outliers in them: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">outliers</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">outlier</span> <span class="ow">in</span> <span class="n">outliers</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s2">&quot;index=&quot;</span><span class="p">,</span><span class="n">outlier</span>
+    <span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">log_data</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="k">print</span> <span class="n">feature</span><span class="p">,</span><span class="s2">&quot;=&quot;</span><span class="p">,(</span><span class="n">data</span><span class="p">[</span><span class="n">feature</span><span class="p">][</span><span class="n">outlier</span><span class="p">])</span>
+    <span class="k">print</span> <span class="s2">&quot;&quot;</span>
 
 <span class="c1"># Remove the outliers, if any were specified</span>
 <span class="n">good_data</span> <span class="o">=</span> <span class="n">log_data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">log_data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">outliers</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
@@ -18146,8 +18149,47 @@ Once you have performed this implementation, the dataset will be stored in the v
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Number of data points which have ALL outliers in them: 0
-Number of data points which have &gt; 1 outliers in them: 5
+<pre>Number of data points which have &gt; 1 outliers in them: 5
+index= 128
+Fresh = 140
+Milk = 8847
+Grocery = 3823
+Frozen = 142
+Detergents_Paper = 1062
+Delicatessen = 3
+
+index= 65
+Fresh = 85
+Milk = 20959
+Grocery = 45828
+Frozen = 36
+Detergents_Paper = 24231
+Delicatessen = 1423
+
+index= 66
+Fresh = 9
+Milk = 1534
+Grocery = 7417
+Frozen = 175
+Detergents_Paper = 3468
+Delicatessen = 27
+
+index= 154
+Fresh = 622
+Milk = 55
+Grocery = 137
+Frozen = 75
+Detergents_Paper = 7
+Delicatessen = 8
+
+index= 75
+Fresh = 20398
+Milk = 1137
+Grocery = 3
+Frozen = 4407
+Detergents_Paper = 3
+Delicatessen = 975
+
 </pre>
 </div>
 </div>
@@ -18177,7 +18219,19 @@ Number of data points which have &gt; 1 outliers in them: 5</p>
 
 <pre><code>- We SHOULD remove these data as being an outlier
 - These are outliers and will kew our results and hence we should remove them
-- They are very less in percentage of data (5/440 ~1%) and thus will not affect our classification.</code></pre>
+- They are very less in percentage of data (5/440 ~1%) and thus will not affect our classification.
+
+</code></pre>
+<p>index 128,65,66,154,75 were added as shown above. They were added because</p>
+
+<pre><code>- 128 - Delicatessen and Fresh are the outliers
+- 65 - Frozen and Fresh are the outliers
+- 66 - Fresh and Delicatessen are the outliers
+- 154 - Detergents_Paper and Delicatessen are the outliers
+- 75 - Grocery and Detergents_Paper are the outliers.
+
+</code></pre>
+<p>above are the minimum outliers, but they may contain more. This gives us a sense of why they were added into a exclusion so that we dont skew the data.</p>
 
 </div>
 </div>
@@ -18209,7 +18263,7 @@ Number of data points which have &gt; 1 outliers in them: 5</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[132]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Apply PCA by fitting the good data with the same number of dimensions as features</span>
@@ -18643,6 +18697,28 @@ YEBQAgAAGBCUAAAABgQlAACAAUEJAABg4P8Bandj77GLTekAAAAASUVORK5CYII=
 
 </code></pre>
 <p>The first 4 PCA dimentions is made up of a large negative weights in Detergent_Paper and Fresh, While large positive correlation in Delicatessen and Frozen. The other categories are small. Since PCA deals with varience in data and it's correlation, it shows that there are clearly distinct categories of spending habits which are captured by different dimentions. For example, some customers buy a lot of detergent powder while another category buy frozen foods. Thus we need to proceed to find how many categories are present in our customer segments.</p>
+<p>Dimension 1:</p>
+
+<pre><code>- This has detergent_paper with weight of ~0.8. It is contributing the largest factor. Groceries and Frozen are also negative ~0.4 and contribute.
+- This is best charecterized by Fresh market (majority) and Low cost (minority) category. It belongs to somewhere in between. This is because detergent_paper is such high dominany in only fresh markey but delicatissen is only so low in low cost category. It can be a mix of 2 categories however FRESH MARKET is the dominany one.
+
+</code></pre>
+<p>Dimension 2:</p>
+
+<pre><code>- This has fresh, frozen &amp; delicatessen weightages &gt; .5 and rest are small &lt; .2
+- This is best charecterized by Fresh market category clearly as all these 3 components( fresh, frozen &amp; delicatessen)  have higher weitage in this category
+
+</code></pre>
+<p>Dimension 3:</p>
+
+<pre><code>- This is dominated by fresh(.65)and delicateness(.6). Other components are smaller (&lt;.4)
+- This is best charecterized by lowcost AND Fresh market (combined) category as its relatively less in the dominant components compared to others but still large enough not to be neglected.
+
+</code></pre>
+<p>Dimension 4:</p>
+
+<pre><code>- This is dominated by frozen(.8) and delicatessen (.5)
+- This is best charecterized by cafe store (majority) and fresh market(minority) category. However dominany one is Cafe store as it has a high delicatessen however still has some components of fresh market due to high frozen food.</code></pre>
 
 </div>
 </div>
@@ -18659,7 +18735,7 @@ YEBQAgAAGBCUAAAABgQlAACAAUEJAABg4P8Bandj77GLTekAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[133]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display sample log-data after having a PCA transformation applied</span>
@@ -18747,7 +18823,7 @@ YEBQAgAAGBCUAAAABgQlAACAAUEJAABg4P8Bandj77GLTekAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[134]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Apply PCA by fitting the good data with only two dimensions</span>
@@ -18780,7 +18856,7 @@ YEBQAgAAGBCUAAAABgQlAACAAUEJAABg4P8Bandj77GLTekAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[135]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display sample log-data after applying PCA transformation in two dimensions</span>
@@ -19388,7 +19464,7 @@ YXGSrIUQQgiLk2QthBBCWJwkayGEEMLi/j9OCdOKtQt7OwAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[136]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Apply your clustering algorithm of choice to the reduced data </span>
@@ -19458,7 +19534,7 @@ YXGSrIUQQgiLk2QthBBCWJwkayGEEMLi/j9OCdOKtQt7OwAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[137]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the results of the clustering from implementation</span>
@@ -20309,7 +20385,7 @@ JEmSUslkSJIkSVIqmQxJkiRJSqX/D/4WdQxUSKXSAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[147]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Inverse transform the centers</span>
@@ -20541,7 +20617,7 @@ JEmSUslkSJIkSVIqmQxJkiRJSqX/D/4WdQxUSKXSAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[151]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the predictions</span>
@@ -20821,7 +20897,7 @@ We cannot assume that the change affects all cunsimers equally. To choose which 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[152]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the clustering results based on &#39;Channel&#39; data</span>
@@ -21661,6 +21737,19 @@ kmVIkiRJUiVZhiRJkiRV0v8D6fXHdj0ODuIAAAAASUVORK5CYII=
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
