@@ -181,14 +181,14 @@ class Simulator(object):
                     if self.current_time - self.last_updated >= self.update_delay:
                         self.env.step()
                         self.last_updated = self.current_time
-                    
-                    # Render text
-                    self.render_text(trial, testing)
+                        
+                        # Render text
+                        self.render_text(trial, testing)
 
-                    # Render GUI and sleep
-                    if self.display:
-                        self.render(trial, testing)
-                        self.pygame.time.wait(self.frame_delay)
+                        # Render GUI and sleep
+                        if self.display:
+                            self.render(trial, testing)
+                            self.pygame.time.wait(self.frame_delay)
 
                 except KeyboardInterrupt:
                     self.quit = True
